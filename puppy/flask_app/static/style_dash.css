@@ -1,0 +1,60 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content:end;
+    background-color: rgb(241,197,82);
+    margin-bottom: 0px;
+}
+
+.container_body{
+    background-color: rgb(8,55,99);
+    margin: 0px 50px ;
+}
+
+.link{
+    margin: 20px;
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+.link_top{
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+tr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+td{
+    margin-right: 30px;
+    margin-left: 10px;
+    padding: 20px;
+}
+
+th{
+    margin: 0px, 10px;
+    padding: 25px;
+}
+
+.main_table{
+    width: 600px;
+}
+
+.label{
+    margin-right: 5px;
+}
+
+h1,h2,th,td{
+    color: rgb(241,197,82);
+}

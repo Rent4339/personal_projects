@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_dash.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a class="link_top" href="/">Home</a>
+            <a class="link_top" href="/logout">Logout</a>
+        </header>
+        <div class="container_body">
+            <body>
+                <h1 >Welcome {{user.name}}</h1>
+                <h2 class="table_title">Available Litters</h2>
+                <table class="main_table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Available Puppies</th>
+                                <th>Puppy Breed</th>
+                                <th>Take Home Day</th>
+                                <th>Posted By</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for liter in all_litters %}
+                            <tr>
+                                <td><a class="link" href="/view/{{liter.id}}">{{liter.id}}</a></td>
+                                <td>{{liter.quantity}}</td>
+                                <td class="label">{{liter.breed}}</td>
+                                <td class="label">{{liter.home}}</td>
+                                <td class="label">{{user.name}}</td>
+                                <td class="label">
+                                    <p>
+                                        <a class="link" href="/update/{{liter.id}}">Update</a>
+                                        <a class="link" href="/delete/{{liter.id}}">Delete</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                </table>
+                <a class="link" href="/new">Post a Litter</a>
+            </body>
+        </div>
+    </div>
+</body>
+</html>

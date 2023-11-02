@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+                <a class="link" href="/">Home</a>
+                <a class="link" href="/dashboard">Puppies</a>
+                <a class="link" href="/login">Login</a>
+                <a class="link" href="/login">Register</a>
+        </div>
+        <!-- <div class="main">
+            <h2>Picture caroussell</h2>
+        </div> -->
+        <div class="about">
+            <div class="about-body">
+                <img class="about-pic" src="{{ url_for('static', filename='fam.jpg') }}">
+                <div class="about-right">
+                    <h2 class="right-title">About Us</h2>
+                    <p class="right-p">Hi there! I'm a devoted dog lover, sharing my life with two amazing Belgian Malinois companions. Pac, my loyal 3-year-old, embodies adventure, while Moon, the spirited 2-year-old, adds playful charm to our home. Together, we explore, create cherished memories, and celebrate the joy of the human-canine connection. Join us on our journey of love, laughter, and paws in motion!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+</body>
+</html>
